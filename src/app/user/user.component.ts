@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'roo-user',
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   </p>
   <a [routerLink]="['/user']">User</a>
   <!--<a [routerLink]="['../']">Home</a>-->
+  <br>
+  <button (click)="onNavigate()">Go home</button>
 `,
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  onNavigate(){
+    this.router.navigate(['/']);
+  }
 
   ngOnInit() {
   }
