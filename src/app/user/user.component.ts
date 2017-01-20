@@ -4,7 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'roo-user',
   template: `<p>
   user works!
-  </p>`,
+  </p>
+  <a [routerLink]="['/user']">User</a>
+  <!--<a [routerLink]="['../']">Home</a>-->
+`,
 })
 export class UserComponent implements OnInit {
 
