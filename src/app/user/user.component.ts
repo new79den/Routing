@@ -12,6 +12,8 @@ import {Subscribable} from "rxjs/Observable";
   <button (click)="onNavigate()">Go home</button>
   <hr>
   {{id}}
+  <hr>
+  <router-outlet></router-outlet>
 `,
 })
 export class UserComponent implements OnInit, OnDestroy {
